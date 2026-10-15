@@ -14,14 +14,9 @@ const prodiRoutes = require("./routes/prodiRoutes");
 
 app.use(express.json());
 
-app.use('/mahasiswa', mahasiswaRoutes);
-app.use('/prodi', prodiRoutes);
+// TODO: app.use('/mahasiswa', mahasiswaRoutes);
+// TODO: app.use('/prodi', prodiRoutes);
 
-mongoose.connect(process.env.MONGODB_URI)
-    .then(() => { 
-        console.log('Terhubung ke MongoDB Server'); 
-        app.listen(PORT, ()=>{
-            console.log(`Server berjalan di http://localhost:${PORT}`);
-        }); 
-    })
-    .catch((err) => console.error('Gagal terhubung:', err.message));
+// TODO: mongoose.connect(process.env.MONGODB_URI)
+//   .then(() => { console.log('Terhubung ke MongoDB Atlas'); app.listen(PORT, ...); })
+//   .catch((err) => console.error('Gagal terhubung:', err.message));
